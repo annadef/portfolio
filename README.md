@@ -30,7 +30,7 @@ Portfolio personale di Anna De Feo, web designer e full-stack developer. Il sito
 ## Requisiti
 
 - Node.js 20 o superiore
-- pnpm
+- npm
 
 ## Installazione
 
@@ -39,13 +39,13 @@ Clona il repository e installa le dipendenze:
 ```bash
 git clone https://github.com/annadef/portfolio.git
 cd portfolio
-pnpm install
+npm install
 ```
 
 Avvia il server di sviluppo:
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 Apri [http://localhost:3000](http://localhost:3000).
@@ -53,17 +53,17 @@ Apri [http://localhost:3000](http://localhost:3000).
 ## Comandi disponibili
 
 ```bash
-pnpm dev       # Server di sviluppo
-pnpm lint      # Controllo ESLint
-pnpm build     # Build di produzione
-pnpm start     # Avvia la build di produzione
+npm run dev       # Server di sviluppo
+npm run lint      # Controllo ESLint
+npm run build     # Build di produzione
+npm run start     # Avvia la build di produzione
 ```
 
 Prima del deploy è consigliato eseguire:
 
 ```bash
-pnpm lint
-pnpm build
+npm run lint
+npm run build
 ```
 
 ## Configurazione Spline
@@ -124,7 +124,7 @@ public/
 4. Aggiungi `NEXT_PUBLIC_SPLINE_ROBOT_SCENE` solo se vuoi sovrascrivere la scena di default.
 5. Avvia il deploy.
 
-Vercel riconosce automaticamente Next.js e usa lo script `pnpm build` grazie al `pnpm-lock.yaml` presente nel repository.
+Vercel riconosce automaticamente Next.js e usa `npm install` e `npm run build` grazie al `package-lock.json` presente nel repository.
 
 ## Licenza e contenuti
 
