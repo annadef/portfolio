@@ -377,7 +377,7 @@ export default function Home() {
                 }}
               >
                 <FoldText
-                  text="I DESIGN AND BUILD DIGITAL EXPERIENCES THAT WORK WELL."
+                  text="DESIGN AND BUILD DIGITAL EXPERIENCES THAT WORK WELL."
                   splitBy="word"
                   hinge="top"
                   duration={0.58}
@@ -404,7 +404,7 @@ export default function Home() {
                 }}
               >
                 <FoldText
-                  text="I work across front-end and back-end to create thoughtful, reliable products with clear structure and a solid technical foundation."
+                  text="Work across front-end and back-end to create thoughtful, reliable products with clear structure and a solid technical foundation."
                   splitBy="word"
                   hinge="top"
                   duration={0.58}
