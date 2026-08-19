@@ -85,6 +85,7 @@ export function VideoCard({
         ease: EASE,
       }}
       onMouseEnter={() => {
+        window.dispatchEvent(new Event("portfolio:project-hover"));
         if (!isMobile) onHoverChange(true);
       }}
       onMouseLeave={() => {

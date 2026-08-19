@@ -25,12 +25,18 @@ export function MusicVinyl() {
       }
     };
 
+    const handleProjectHover = () => {
+      setIsOpen(false);
+    };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     document.addEventListener("pointerdown", handleOutsidePointerDown);
+    window.addEventListener("portfolio:project-hover", handleProjectHover);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("pointerdown", handleOutsidePointerDown);
+      window.removeEventListener("portfolio:project-hover", handleProjectHover);
     };
   }, []);
 
