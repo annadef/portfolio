@@ -13,9 +13,7 @@ const projects = [
     description:
       "I developed an application that allows users to assemble a PC verifying component compatibility, calculating the price in real time, and managing the entire process.",
     skills: ["React", "TypeScript", "Tailwind CSS", "Laravel", "PostgreSQL"],
-    linkedin:
-      "https://www.linkedin.com/posts/anna-de-feo-201715235_react-typescript-laravel-ugcPost-7483838578951782401-TIe-/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADqpF-EBGIvk6CidjnLerntu33I7fJsnr54",
-    linkType: "linkedin" as const,
+    link: "https://www.linkedin.com/posts/anna-de-feo-201715235_react-typescript-laravel-ugcPost-7483838578951782401-TIe-/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADqpF-EBGIvk6CidjnLerntu33I7fJsnr54",
   },
   {
     id: 2,
@@ -26,8 +24,7 @@ const projects = [
     description:
       "Developed a landing page for Angelo Cornacchia, a professional therapist, using WordPress and Elementor. The website provides information about his services.",
     skills: ["Wordpress", "Elementor", "HTML", "CSS", "JavaScript"],
-    figma: "https://angelocornacchia.it/",
-    linkType: "figma" as const,
+    link: "https://angelocornacchia.it/",
   },
   {
     id: 3,
@@ -38,8 +35,7 @@ const projects = [
     description:
       "Developed the consulting landing page for Infobasic using WordPress and Elementor.",
     skills: ["Wordpress", "Elementor", "HTML", "CSS", "JavaScript"],
-    figma: "https://www.infobasic.it/consulenza-2/",
-    linkType: "figma" as const,
+    link: "https://www.infobasic.it/consulenza-2/",
   },
   {
     id: 4,
@@ -50,9 +46,7 @@ const projects = [
     description:
       "Sports tournament management app. Key features: Create, edit, and delete teams and tournaments, add or edit match results, tournament and results history.",
     skills: ["React", "Tailwind CSS", "PHP", "API REST", "PostgreSQL"],
-    linkedin:
-      "https://www.linkedin.com/posts/anna-de-feo-201715235_react-typescript-php-ugcPost-7432017585321213952-y_qF/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADqpF-EBGIvk6CidjnLerntu33I7fJsnr54",
-    linkType: "linkedin" as const,
+    link: "https://www.linkedin.com/posts/anna-de-feo-201715235_react-typescript-php-ugcPost-7432017585321213952-y_qF/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADqpF-EBGIvk6CidjnLerntu33I7fJsnr54",
   },
   {
     id: 5,
@@ -63,9 +57,7 @@ const projects = [
     description:
       "Designed the visual identity and website layout for GB Grafica.",
     skills: ["Figma", "WordPress", "Elementor", "HTML", "CSS", "JavaScript"],
-    figma:
-      "https://www.figma.com/design/eJwYbPXlvbUNIqrfAWivD2/GB-Grafica?node-id=0-1&t=i8E9bkN3tEvSlELr-1",
-    linkType: "figma" as const,
+    link: "https://www.figma.com/design/eJwYbPXlvbUNIqrfAWivD2/GB-Grafica?node-id=0-1&t=i8E9bkN3tEvSlELr-1",
   },
   {
     id: 6,
@@ -76,9 +68,7 @@ const projects = [
     description:
       "Designed the visual identity and logo of the brand. Created the website layout in Figma and developed it in WordPress using the Astra theme and Elementor page builder.",
     skills: ["Illustrator", "Figma", "WordPress", "HTML", "CSS", "JavaScript"],
-    figma:
-      "https://www.figma.com/design/1LgE9L4uDrF4TyUIJ3p7bs/Brief-esame-finale?node-id=0-1&t=iimo0neINN4WOPSr-1",
-    linkType: "figma" as const,
+    link: "https://www.figma.com/design/1LgE9L4uDrF4TyUIJ3p7bs/Brief-esame-finale?node-id=0-1&t=iimo0neINN4WOPSr-1",
   },
   {
     id: 7,
@@ -89,9 +79,7 @@ const projects = [
     description:
       "Designed the logo, wireframes, and final prototype. Built an interactive review platform using Vite, Just-DOM, JSON Server and Fetch API for dynamic data.",
     skills: ["Illustrator", "Figma", "Vite", "Tailwind CSS", "JavaScript"],
-    figma:
-      "https://www.figma.com/design/JMQgjjH9htBeVCOpXNR2vy/CmdR?node-id=0-1&t=fOumgNekhEAdNtfN-1",
-    linkType: "figma" as const,
+    link: "https://www.figma.com/design/JMQgjjH9htBeVCOpXNR2vy/CmdR?node-id=0-1&t=fOumgNekhEAdNtfN-1",
   },
   {
     id: 8,
@@ -102,9 +90,7 @@ const projects = [
     description:
       "Developed a jewelry store website including a wishlist feature with persistent data using localStorage.",
     skills: ["Illustrator", "Figma", "Bootstrap", "HTML", "CSS", "JavaScript"],
-    figma:
-      "https://www.figma.com/design/WF3dLdhCeJyZx9OEGrzJmX/Mia-Creazione?node-id=0-1&t=cVuGnMhWJF3RtlvN-1",
-    linkType: "figma" as const,
+    link: "https://www.figma.com/design/WF3dLdhCeJyZx9OEGrzJmX/Mia-Creazione?node-id=0-1&t=cVuGnMhWJF3RtlvN-1",
   },
 ];
 

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Lenis from "lenis";
+import Link from "next/link";
 
 import FoldText from "@/components/ui/fold-text";
 import { MagneticButton } from "@/components/ui/magnetic-button";
@@ -10,6 +11,8 @@ import { WorksGallery } from "@/components/works-gallery";
 import { SkillsOrbitRobot } from "@/components/skills-orbit-robot";
 import { MobileBubbleMenu } from "@/components/mobile-bubble-menu";
 import { MusicVinyl } from "@/components/music-vinyl";
+import { FloatingDock } from "@/components/ui/floating-dock";
+import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -527,7 +530,14 @@ export default function Home() {
                 color: "#8338EC",
               }}
             >
-              <div>© 2026 ANNA DE FEO</div>
+              <Link
+                href="/privacy"
+                className="transition-opacity hover:opacity-70"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy Policy
+              </Link>
 
               <div />
 
@@ -536,6 +546,31 @@ export default function Home() {
           </div>
         </footer>
       </main>
+
+      <FloatingDock
+        items={[
+          {
+            title: "Mail",
+            icon: <Mail className="h-full w-full text-inherit" />,
+            href: "mailto:annadefeo91@outlook.it",
+          },
+          {
+            title: "Instagram",
+            icon: <Instagram className="h-full w-full text-inherit" />,
+            href: "https://www.instagram.com/anna_de_feo_?igsh=N2ZweHhuM3lkOTcx&igsi=N2ZweHhuM3lkOTcx",
+          },
+          {
+            title: "LinkedIn",
+            icon: <Linkedin className="h-full w-full text-inherit" />,
+            href: "https://www.linkedin.com/in/anna-de-feo-201715235/",
+          },
+          {
+            title: "Github",
+            icon: <Github className="h-full w-full text-inherit" />,
+            href: "https://github.com/annadef",
+          },
+        ]}
+      />
     </>
   );
 }

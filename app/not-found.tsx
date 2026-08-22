@@ -37,12 +37,6 @@ export default function NotFound() {
     <>
       <div className="blob" id="cursor-blob" />
 
-      <nav className="fixed top-0 left-0 right-0 z-40 flex w-full items-center justify-between rounded-none border-b border-white/30 bg-[#00BBF9]/22 px-6 py-3 shadow-[0_4px_14px_rgba(131,56,236,0.14)] backdrop-blur-md">
-        <Link href="/" className="logo">
-          ANNA DE FEO
-        </Link>
-      </nav>
-
       <main className="flex min-h-screen flex-col items-center justify-center gap-10 px-6 pt-20 text-center md:gap-16">
         <div className="select-none">
           <span

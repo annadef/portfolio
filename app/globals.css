@@ -268,6 +268,12 @@ section {
   justify-content: center;
 }
 
+.privacy-page section {
+  display: block;
+  min-height: 0;
+  padding: 0;
+}
+
 section.container {
   min-width: 0;
   max-width: 100%;
@@ -1107,6 +1113,14 @@ html[class^="img_"][amp4ads=""][i-amphtml-layout=""][i-amphtml-no-boilerplate=""
 
 /* Desktop Skills spacing */
 @media (min-width: 1025px) {
+  .music-widget {
+    left: 60px;
+  }
+
+  .floating-dock-desktop {
+    right: 60px;
+  }
+
   #skills {
     padding-top: 180px;
   }

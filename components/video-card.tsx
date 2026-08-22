@@ -16,9 +16,7 @@ interface Project {
   thumbnail: string;
   description: string;
   skills: string[];
-  figma?: string;
-  linkedin?: string;
-  linkType: "figma" | "linkedin";
+  link: string;
 }
 
 interface VideoCardProps {
@@ -42,15 +40,8 @@ export function VideoCard({
   const [isTouchOpen, setIsTouchOpen] = useState(false);
   const isActive = isHovered || (isMobile && isTouchOpen);
   const layoutInset = isActive || isDimmed ? "28px" : "12px";
-  const link =
-    project.linkType === "linkedin" ? project.linkedin : project.figma;
-
-  const linkLabel = project.linkType === "linkedin" ? "LinkedIn" : "View Figma";
-
-  const ariaLabel =
-    project.linkType === "linkedin"
-      ? `Apri il progetto LinkedIn di ${project.title}`
-      : `Apri il layout Figma di ${project.title}`;
+  const linkLabel = "View";
+  const ariaLabel = `View project ${project.title}`;
 
   return (
     <motion.div
@@ -200,7 +191,7 @@ export function VideoCard({
               TOP BAR — SKILLS + ARROW
           ======================================================= */}
 
-          <div className="mb-4! md:mb-0! flex min-h-11 shrink-0 items-center justify-between px-4!">
+          <div className="mb-4 md:mb-0! flex min-h-11 shrink-0 items-center justify-between px-4!">
             {/* SKILLS */}
 
             <motion.div
@@ -256,7 +247,7 @@ export function VideoCard({
                 "relative flex size-10 shrink-0 items-center justify-center rounded-full",
                 "transition-colors duration-300 ms-3!",
                 isActive
-                  ? "border border-dashed border-[#8338EC] bg-[#DCEBFF] text-[#8338EC]"
+                  ? "border border-dashed border-[#8338EC] bg-transparent text-[#8338EC]"
                   : "bg-[#8338EC] text-white",
               )}
               animate={{
@@ -379,7 +370,7 @@ export function VideoCard({
                   <MagneticButton>
                     <div className="rounded-full border-2 border-[#8338EC] text-[#8338EC] transition-colors duration-300 hover:bg-[#8338EC] hover:text-white">
                       <a
-                        href={link}
+                        href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={ariaLabel}
