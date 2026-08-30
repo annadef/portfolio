@@ -12,6 +12,15 @@ const Spline = dynamic(() => import("@splinetool/react-spline"), {
   ),
 });
 
+// Final visual size of the robot relative to its container (unchanged from before).
+const VISUAL_SCALE = 0.88;
+// Spline sizes its canvas to the layout box, not the CSS transform, so rendering a
+// full-size box and shrinking it with `transform: scale()` wastes GPU pixels. We
+// render at a smaller intrinsic size instead and scale it back up to compensate,
+// cutting rasterization cost (a major source of scroll jank) roughly in half.
+const RENDER_SCALE = 0.7;
+const COMPENSATING_SCALE = VISUAL_SCALE / RENDER_SCALE;
+
 export function SkillsRobot({
   className,
   active = true,
@@ -34,8 +43,13 @@ export function SkillsRobot({
     >
       {active ? (
         <div
-          className="absolute inset-0"
-          style={{ transform: "scale(0.88)", transformOrigin: "center center" }}
+          className="absolute left-1/2 top-1/2"
+          style={{
+            width: `${RENDER_SCALE * 100}%`,
+            height: `${RENDER_SCALE * 100}%`,
+            transform: `translate(-50%, -50%) scale(${COMPENSATING_SCALE})`,
+            transformOrigin: "center center",
+          }}
         >
           <Spline scene={sceneUrl} renderOnDemand onLoad={onLoad} />
         </div>
