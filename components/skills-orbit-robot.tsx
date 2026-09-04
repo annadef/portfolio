@@ -49,7 +49,6 @@ export function SkillsOrbitRobot() {
   const [isMobile, setIsMobile] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [isSectionVisible, setIsSectionVisible] = useState(true);
-  const [robotLoaded, setRobotLoaded] = useState(false);
   const [stageWidth, setStageWidth] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const rotation = useMotionValue(0);
@@ -127,7 +126,7 @@ export function SkillsOrbitRobot() {
 
   const shouldAnimate = !prefersReducedMotion && isSectionVisible;
   const shouldRenderRobot = isSectionVisible;
-  const shouldShowSkills = prefersReducedMotion || robotLoaded;
+  const shouldShowSkills = true;
 
   useAnimationFrame((_, delta) => {
     if (!shouldAnimate || isDragging) return;
@@ -198,7 +197,6 @@ export function SkillsOrbitRobot() {
           <SkillsRobot
             className="h-full overflow-visible bg-transparent md:h-full"
             active={shouldRenderRobot}
-            onLoad={() => setRobotLoaded(true)}
           />
 
           <motion.div

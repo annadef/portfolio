@@ -55,7 +55,7 @@ html {
   --accent: #8338EC;
   --gray: #222222;
   --syne: var(--font-syne), "Syne", sans-serif;
-  --inter: "Geist", sans-serif;
+  --inter: var(--font-geist), "Geist", sans-serif;
 }
 
 .dark {
@@ -451,7 +451,7 @@ section.container {
   text-decoration: none;
   font-size: 0.9rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   transition: none;
 }
 

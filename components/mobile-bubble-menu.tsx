@@ -50,7 +50,7 @@ export function MobileBubbleMenu() {
                 key={item.href}
                 href={item.href}
                 aria-label={item.label}
-                className="inline-flex min-h-11 items-center rounded-full border border-white/30 bg-[#00BBF9]/22 px-6! py-2! text-xs font-semibold uppercase tracking-[0.16em] text-[#8338EC] shadow-[0_10px_30px_rgba(131,56,236,0.28)] backdrop-blur-md transition-colors duration-300 hover:bg-[#8338EC] hover:text-white"
+                className="inline-flex min-h-11 items-center rounded-full border border-white/30 bg-[#00BBF9]/22 px-6! py-2! text-xs font-bold uppercase tracking-[0.16em] text-[#8338EC] shadow-[0_10px_30px_rgba(131,56,236,0.28)] backdrop-blur-md transition-colors duration-300 hover:bg-[#8338EC] hover:text-white"
                 initial={{ opacity: 0, x: 24, scale: 0.75 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 exit={{ opacity: 0, x: 24, scale: 0.75 }}

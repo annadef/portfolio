@@ -7,7 +7,7 @@ export default function MagneticButtonDemo() {
     console.log("clicked");
   };
   return (
-    <div className="flex h-[40rem] w-full items-center justify-center">
+    <div className="flex h-160 w-full items-center justify-center">
       <MagneticButton>
         <button
           onClick={handleClick}

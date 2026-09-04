@@ -60,10 +60,6 @@ export const MagneticButton = ({
     if (isCoarsePointer) {
       setIsActive(true);
     }
-
-    if (e.pointerType === "touch") {
-      e.preventDefault();
-    }
   };
 
   const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {

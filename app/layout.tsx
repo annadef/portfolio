@@ -1,8 +1,13 @@
 import type React from "react";
 import type { Metadata, Viewport } from "next";
-import { Syne } from "next/font/google";
+import { Geist, Syne } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+});
 
 const syne = Syne({
   subsets: ["latin"],
@@ -32,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${syne.variable}`}>
+      <body className={`${geist.variable} ${syne.variable}`}>
         {children}
 
         <Analytics />

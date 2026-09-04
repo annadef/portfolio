@@ -191,7 +191,7 @@ export function VideoCard({
               TOP BAR — SKILLS + ARROW
           ======================================================= */}
 
-          <div className="mb-4 md:mb-0! flex min-h-11 shrink-0 items-center justify-between px-4!">
+          <div className="mb-4! md:mb-2! flex min-h-11 shrink-0 items-center justify-between px-4!">
             {/* SKILLS */}
 
             <motion.div
@@ -301,7 +301,7 @@ export function VideoCard({
           ======================================================= */}
 
           <motion.div
-            className="mt-4! shrink-0 px-4! pb-2!"
+            className="mt-4! md:mt-2! shrink-0 px-4! pb-2!"
             initial={false}
             animate={{
               y: isActive ? 0 : 4,
