@@ -12,11 +12,13 @@ import { SkillsOrbitRobot } from "@/components/skills-orbit-robot";
 import { MobileBubbleMenu } from "@/components/mobile-bubble-menu";
 import { MusicVinyl } from "@/components/music-vinyl";
 import { FloatingDock } from "@/components/ui/floating-dock";
+import { useCursorBlob } from "@/hooks/use-cursor-blob";
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  useCursorBlob("cursor-blob");
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia(
@@ -31,7 +33,6 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    let mouseRaf = 0;
     let scrollRaf = 0;
     let lenisRaf = 0;
 
@@ -55,30 +56,6 @@ export default function Home() {
     if (lenis) {
       lenisRaf = window.requestAnimationFrame(runLenis);
     }
-
-    const blob = document.getElementById("cursor-blob");
-
-    let mouseX = 0;
-    let mouseY = 0;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-
-      if (!blob || mouseRaf) return;
-
-      mouseRaf = window.requestAnimationFrame(() => {
-        blob.style.transform = `translate(${mouseX - 140}px, ${
-          mouseY - 128
-        }px)`;
-
-        mouseRaf = 0;
-      });
-    };
-
-    document.addEventListener("mousemove", handleMouseMove, {
-      passive: true,
-    });
 
     /*
      * ----------------------------------------------------------
@@ -204,10 +181,6 @@ export default function Home() {
      */
 
     return () => {
-      if (mouseRaf) {
-        window.cancelAnimationFrame(mouseRaf);
-      }
-
       if (scrollRaf) {
         window.cancelAnimationFrame(scrollRaf);
       }
@@ -217,8 +190,6 @@ export default function Home() {
       }
 
       lenis?.destroy();
-
-      document.removeEventListener("mousemove", handleMouseMove);
 
       if (!lenis) {
         window.removeEventListener("scroll", handleScroll);

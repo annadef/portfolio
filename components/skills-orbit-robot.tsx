@@ -48,7 +48,7 @@ export function SkillsOrbitRobot() {
   const lastPointerAngleRef = useRef(0);
   const [isMobile, setIsMobile] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const [isSectionVisible, setIsSectionVisible] = useState(true);
+  const [isSectionVisible, setIsSectionVisible] = useState(false);
   const [stageWidth, setStageWidth] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const rotation = useMotionValue(0);
@@ -93,8 +93,11 @@ export function SkillsOrbitRobot() {
     if (!target) return;
 
     const observer = new IntersectionObserver(
-      ([entry]) => setIsSectionVisible(entry.isIntersecting),
+      ([entry]) => {
+        setIsSectionVisible(entry.isIntersecting);
+      },
       {
+        rootMargin: "200px 0px",
         threshold: 0.08,
       },
     );

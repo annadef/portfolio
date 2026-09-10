@@ -1,37 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
 import Link from "next/link";
 import { MagneticButton } from "@/components/ui/magnetic-button";
+import { useCursorBlob } from "@/hooks/use-cursor-blob";
 
 export default function NotFound() {
-  useEffect(() => {
-    let mouseRaf = 0;
-
-    const blob = document.getElementById("cursor-blob");
-
-    let mouseX = 0;
-    let mouseY = 0;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-
-      if (!blob || mouseRaf) return;
-
-      mouseRaf = window.requestAnimationFrame(() => {
-        blob.style.transform = `translate(${mouseX - 140}px, ${mouseY - 128}px)`;
-        mouseRaf = 0;
-      });
-    };
-
-    document.addEventListener("mousemove", handleMouseMove, { passive: true });
-
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      if (mouseRaf) window.cancelAnimationFrame(mouseRaf);
-    };
-  }, []);
+  useCursorBlob("cursor-blob");
 
   return (
     <>
