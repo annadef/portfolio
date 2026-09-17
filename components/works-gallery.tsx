@@ -106,10 +106,28 @@ export function WorksGallery() {
   return (
     <div className="container mx-auto px-6">
       {/* =========================================================
-          DESKTOP — 4 PROGETTI PER RIGA
+          TABLET AND MOBILE — FLUID GRID
       ========================================================= */}
 
-      <div className="hidden space-y-3 md:block">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:hidden">
+        {projects.map((project) => (
+          <VideoCard
+            key={project.id}
+            project={project}
+            isHovered={hoveredId === project.id}
+            isDimmed={hoveredId !== null && hoveredId !== project.id}
+            onHoverChange={(hovered) =>
+              setHoveredId(hovered ? project.id : null)
+            }
+          />
+        ))}
+      </div>
+
+      {/* =========================================================
+          LARGE DESKTOP — 4 PROGETTI PER RIGA
+      ========================================================= */}
+
+      <div className="hidden space-y-3 lg:block">
         {rows.map((row, rowIndex) => (
           <div key={rowIndex} className="flex w-full min-w-0 items-start gap-6">
             {row.map((project) => (
@@ -124,24 +142,6 @@ export function WorksGallery() {
               />
             ))}
           </div>
-        ))}
-      </div>
-
-      {/* =========================================================
-          MOBILE
-      ========================================================= */}
-
-      <div className="flex flex-col gap-6 md:hidden">
-        {projects.map((project) => (
-          <VideoCard
-            key={project.id}
-            project={project}
-            isHovered={hoveredId === project.id}
-            isDimmed={hoveredId !== null && hoveredId !== project.id}
-            onHoverChange={(hovered) =>
-              setHoveredId(hovered ? project.id : null)
-            }
-          />
         ))}
       </div>
     </div>

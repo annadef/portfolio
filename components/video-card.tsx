@@ -51,9 +51,9 @@ export function VideoCard({
         "cursor-default md:cursor-none",
         "transition-[flex] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]",
         "transition-[filter,opacity,flex] duration-500 ease-out",
-        "md:w-0 md:flex-1 md:basis-0 md:self-start",
-        isHovered && "md:flex-[1.6]",
-        isDimmed && "md:blur-[2px] md:opacity-60",
+        "lg:w-0 lg:flex-1 lg:basis-0 lg:self-start",
+        isHovered && "lg:flex-[1.6]",
+        isDimmed && "lg:blur-[2px] lg:opacity-60",
       )}
       style={{
         zIndex: isActive ? 30 : 1,
@@ -301,7 +301,10 @@ export function VideoCard({
           ======================================================= */}
 
           <motion.div
-            className="mt-4! md:mt-2! shrink-0 px-4! pb-2!"
+            className={cn(
+              "shrink-0 px-4! pb-2!",
+              isActive ? "mt-6!" : "mt-4! md:mt-2!",
+            )}
             initial={false}
             animate={{
               y: isActive ? 0 : 4,
